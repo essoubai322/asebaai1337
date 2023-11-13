@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asebaai <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 06:22:09 by asebaai           #+#    #+#             */
-/*   Updated: 2023/11/04 08:11:48 by asebaai          ###   ########.fr       */
+/*   Updated: 2023/11/13 21:10:23 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

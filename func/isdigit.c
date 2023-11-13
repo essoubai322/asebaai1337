@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   isdigit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asebaai <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 23:44:29 by asebaai           #+#    #+#             */
-/*   Updated: 2023/11/01 03:05:23 by asebaai          ###   ########.fr       */
+/*   Updated: 2023/11/13 21:30:40 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   isprint.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asebaai <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 03:06:28 by asebaai           #+#    #+#             */
-/*   Updated: 2023/11/01 03:09:24 by asebaai          ###   ########.fr       */
+/*   Updated: 2023/11/13 21:30:35 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

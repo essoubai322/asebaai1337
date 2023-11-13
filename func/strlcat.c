@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   strlcat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asebaai <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 06:45:31 by asebaai           #+#    #+#             */
-/*   Updated: 2023/11/04 08:11:29 by asebaai          ###   ########.fr       */
+/*   Updated: 2023/11/13 21:10:37 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -22,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	total = destl + srcl;
 	if (size == 0 || destl >= size)
 	{
-		return(destl + size);
+		return (destl + size);
 	}
 	i = 0;
 	while (src[i] && i < size - destl - 1)
