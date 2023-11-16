@@ -6,7 +6,7 @@
 /*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:39:35 by asebaai           #+#    #+#             */
-/*   Updated: 2023/11/13 21:31:50 by asebaai          ###   ########.fr       */
+/*   Updated: 2023/11/16 03:36:40 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 #include <stddef.h>
 #include <malloc.h>
 #include <limits.h>
+#include <stdint.h>
+
 
 // functions
 int    ft_atoi(const char *str);
@@ -44,6 +46,9 @@ size_t	ft_strlen(const char *s);
 char  *ft_strnstr(const char *big, const char *little, size_t len);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strdup(const char *s);
+
 
 
 #endif
