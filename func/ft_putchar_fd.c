@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 17:54:02 by asebaai           #+#    #+#             */
-/*   Updated: 2023/11/19 07:51:08 by asebaai          ###   ########.fr       */
+/*   Created: 2023/11/20 02:46:30 by asebaai           #+#    #+#             */
+/*   Updated: 2023/11/22 14:44:47 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// It is an integer file descriptor for the opened file, 
+// which the open() function returns when opening a file.
+
 #include "libft.h"
 
-char    *ft_strdup(const char *s)
+void    ft_putchar_fd(char c, int fd)
 {
-    char *str;
-    size_t ls;
-    
-    ls = ft_strlen(s) + 1;
-    str = (char *)ft_calloc(ls, sizeof(char));
-    if (!str)
-    {
-        return (NULL);
-    }
-    ft_strlcpy(str,s,ls);
-    return (str);
+        write(fd, &c, 1);
 }

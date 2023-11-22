@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 17:54:02 by asebaai           #+#    #+#             */
-/*   Updated: 2023/11/19 07:51:08 by asebaai          ###   ########.fr       */
+/*   Created: 2023/11/20 02:50:34 by asebaai           #+#    #+#             */
+/*   Updated: 2023/11/22 11:18:43 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s)
+void    ft_putendl_fd(char *s, int fd)
 {
-    char *str;
-    size_t ls;
-    
-    ls = ft_strlen(s) + 1;
-    str = (char *)ft_calloc(ls, sizeof(char));
-    if (!str)
-    {
-        return (NULL);
-    }
-    ft_strlcpy(str,s,ls);
-    return (str);
+        int  i;
+
+        if (!s)
+                return ;
+        i = 0;
+        while (s[i])
+        {
+                ft_putchar_fd(s[i],fd);
+                i++;
+        }
+        write(fd, "\n", 1);
 }

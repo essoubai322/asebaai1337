@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 17:54:02 by asebaai           #+#    #+#             */
-/*   Updated: 2023/11/19 07:51:08 by asebaai          ###   ########.fr       */
+/*   Created: 2023/11/16 15:40:46 by asebaai           #+#    #+#             */
+/*   Updated: 2023/11/17 08:33:00 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+ 
+char **a_ft_split() {
+    char **a01;
 
-char    *ft_strdup(const char *s)
-{
-    char *str;
-    size_t ls;
+    a01 = malloc(sizeof(char *) * 4);
     
-    ls = ft_strlen(s) + 1;
-    str = (char *)ft_calloc(ls, sizeof(char));
-    if (!str)
-    {
-        return (NULL);
+    a01[0] = ft_strdup("aiman1");
+    a01[1] = ft_strdup("aiman2");
+    a01[2] = ft_strdup("aiman3");
+    a01[3] = NULL;
+
+    
+    return (a01);
+}
+
+int main()
+{
+    char **a = a_ft_split();
+
+    for(int i = 0; a[i]; i++){
+        printf("%s\n", a[i]);
+        free(a[i]);
     }
-    ft_strlcpy(str,s,ls);
-    return (str);
+
+    free(a);
 }
