@@ -6,7 +6,7 @@
 /*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 00:17:44 by asebaai           #+#    #+#             */
-/*   Updated: 2023/12/12 14:47:00 by asebaai          ###   ########.fr       */
+/*   Updated: 2023/12/19 17:52:37 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ static char	*join_read(char *save_sto, char *buffer, int fd)
 	free(buffer);
 	buffer = NULL;
 	return (save_sto);
+
+
 }
 
 static int	new_l(char *save_sto)
@@ -75,10 +77,13 @@ char	*get_next_line(int fd)
 		return (NULL);
 	buffer = malloc((size_t)BUFFER_SIZE + 1);
 	if (!buffer)
+	{
+		free(save_str);
 		return (NULL);
+	}
 	save_str = join_read(save_str, buffer, fd);
 	if (!save_str || save_str[0] == '\0')
-		return (NULL);
+		return (fr(save_str));
 	i = new_l(save_str);
 	next_line = malloc(i + 1);
 	if (!next_line)
@@ -89,4 +94,18 @@ char	*get_next_line(int fd)
 	free(save_str);
 	save_str = save_lines;
 	return (next_line);
+}
+int main()
+{
+	int fd = open("file.c", O_RDONLY);
+	char *line = get_next_line(fd);
+    while (*line)
+    {
+        printf("%s", line);
+        free(line);
+        line = get_next_line(fd);
+    }   
+    free(line);
+	close(fd);
+	return 0;
 }

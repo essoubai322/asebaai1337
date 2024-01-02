@@ -6,7 +6,7 @@
 /*   By: asebaai <asebaai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:48:28 by asebaai           #+#    #+#             */
-/*   Updated: 2023/12/12 15:04:02 by asebaai          ###   ########.fr       */
+/*   Updated: 2023/12/14 17:56:56 by asebaai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	save_str[fd] = join_read(save_str[fd], buffer, fd);
 	if (!save_str[fd] || save_str[fd][0] == '\0')
-		return (NULL);
+		return (fr(save_str[fd]));
 	i = new_l(save_str[fd]);
 	next_line = malloc(i + 1);
 	if (!next_line)
